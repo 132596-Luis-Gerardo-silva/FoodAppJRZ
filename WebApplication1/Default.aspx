@@ -1,11 +1,23 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication1._Default" %>
 
+
+
+
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <head>
+	<title>Maps</title>
+	<link rel="stylesheet" type="text/css" href="Content/estilo.css">
+</head>
 
     <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
+        <h1>FoodAPPJRZ</h1>
+        <p class="lead">Prueba 1 Desde Maquina Virtual Server UACJ</p>
         <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+        <body>
+	<div id="map"></div>
+    <script src="Scripts/script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBATuXThARVMVKFK2-5dHcXq904CnT9sJQ&callback=iniciarMap"></script>
+<   /body>
     </div>
 
     <div class="row">
