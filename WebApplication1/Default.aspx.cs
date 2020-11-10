@@ -47,7 +47,7 @@ namespace WebApplication1
 
         [WebMethod]
         //public  static List<Object> Test()
-        public static string Test()
+        public static string Test(string text)
         {
             //List<Object> List = new List<Object>();
 
@@ -56,7 +56,7 @@ namespace WebApplication1
             List<Object> List = null;
             string json = String.Empty;
 
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create("https://foodappjrz.000webhostapp.com/Select_Menu.php");
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create("https://foodappjrz.000webhostapp.com/Select_Menu.php?Precio="+text);
             httpWebRequest.ContentType = "text/json";
             httpWebRequest.Method = WebRequestMethods.Http.Get;
             httpWebRequest.Accept = "application/json; charset=utf-8";
