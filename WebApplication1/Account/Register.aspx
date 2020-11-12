@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Register" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="WebApplication1.Account.Register" %>
+﻿<%@ Page Title="Registro" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="WebApplication1.Account.Register" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <h2><%: Title %>.</h2>
@@ -7,38 +7,64 @@
     </p>
 
     <div class="form-horizontal">
-        <h4>Crear Una nueva cuenta</h4>
+        <h4>Registre un nuevo lugar!!</h4>
         <hr />
         <asp:ValidationSummary runat="server" CssClass="text-danger" />
         <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="Email" CssClass="col-md-2 control-label">Email</asp:Label>
+            <asp:Label runat="server" AssociatedControlID="Lugar" CssClass="col-md-2 control-label">Lugar</asp:Label>
             <div class="col-md-10">
-                <asp:TextBox runat="server" ID="Email" CssClass="form-control" TextMode="Email" />
-                <asp:RequiredFieldValidator runat="server" ControlToValidate="Email"
-                    CssClass="text-danger" ErrorMessage="The email field is required." />
+                <asp:TextBox runat="server" ID="Lugar" CssClass="form-control" TextMode="SingleLine" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="Lugar"
+                    CssClass="text-danger" ErrorMessage="El Lugar es requerido." />
+            </div>
+        </div>
+         <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="Descripcion" CssClass="col-md-2 control-label">Descripcion</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="Descripcion" CssClass="form-control"  TextMode="SingleLine"/>
+                <asp:RequiredFieldValidator runat="server"  ControlToValidate="Descripcion"
+                    CssClass="text-danger" ErrorMessage="La Descripcion es requerida" />
             </div>
         </div>
         <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-2 control-label">Password</asp:Label>
+            <asp:Label runat="server" AssociatedControlID="Producto" CssClass="col-md-2 control-label">Producto</asp:Label>
             <div class="col-md-10">
-                <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" />
-                <asp:RequiredFieldValidator runat="server" ControlToValidate="Password"
-                    CssClass="text-danger" ErrorMessage="The password field is required." />
+                <asp:TextBox runat="server" ID="Producto" CssClass="form-control"  TextMode="SingleLine"/>
+                <asp:RequiredFieldValidator runat="server"  ControlToValidate="Producto"
+                    CssClass="text-danger" ErrorMessage="El Producto es requerido" />
             </div>
         </div>
+        
         <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="ConfirmPassword" CssClass="col-md-2 control-label">Confirm password</asp:Label>
+            <asp:Label runat="server" AssociatedControlID="Precio" CssClass="col-md-2 control-label">Precio</asp:Label>
             <div class="col-md-10">
-                <asp:TextBox runat="server" ID="ConfirmPassword" TextMode="Password" CssClass="form-control" />
-                <asp:RequiredFieldValidator runat="server" ControlToValidate="ConfirmPassword"
-                    CssClass="text-danger" Display="Dynamic" ErrorMessage="The confirm password field is required." />
-                <asp:CompareValidator runat="server" ControlToCompare="Password" ControlToValidate="ConfirmPassword"
-                    CssClass="text-danger" Display="Dynamic" ErrorMessage="The password and confirmation password do not match." />
+                <asp:TextBox runat="server" ID="Precio" CssClass="form-control"  TextMode="SingleLine"/>
+                <asp:RequiredFieldValidator runat="server"  ControlToValidate="Precio"
+                    CssClass="text-danger" ErrorMessage="EL Precio es Requerido" />
             </div>
         </div>
+
+          <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="East" CssClass="col-md-2 control-label">East</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="East" CssClass="form-control" TextMode="SingleLine"/>
+                <asp:RequiredFieldValidator runat="server"  ControlToValidate="East"
+                    CssClass="text-danger" ErrorMessage="La cordenada East es requerida" />
+            </div>
+        </div>
+
+         <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="West" CssClass="col-md-2 control-label">West</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="West" CssClass="form-control" TextMode="SingleLine" />
+                <asp:RequiredFieldValidator runat="server"   ControlToValidate="West"
+                    CssClass="text-danger" ErrorMessage="La cordenada West es requerida" />
+            </div>
+        </div>
+
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <asp:Button runat="server" OnClick="CreateUser_Click" Text="Register" CssClass="btn btn-default" />
+                <asp:Button runat="server" OnClick="CreateUser_Click" Text="Registrar" CssClass="btn btn-default" />
             </div>
         </div>
     </div>
